@@ -616,7 +616,7 @@ function nextWord() {
     });
 
     document.getElementById('currentTeam').innerText = teams[currentTeamIndex];
-    startTimer(5);
+    startTimer(60);
 }
 
 function correctAnswer() {
