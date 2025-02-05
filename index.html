@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>قولها بس لا تقولها | By Tareq</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🎮 قولها بس لا تقولها</h1>
+    </header>
+
+    <main>
+        <section id="teamSelection">
+            <h2>👥 اختر عدد الفرق</h2>
+            <button onclick="setupTeams(2)">🟢 فريقان</button>
+            <button onclick="setupTeams(4)">🔵 أربعة فرق</button>
+            <div id="teamNamesContainer" class="hidden">
+                <h3>✏️ أدخل أسماء الفرق:</h3>
+                <div id="teamInputs"></div>
+                <button onclick="startGame()">🚀 ابدأ اللعبة</button>
+            </div>
+        </section>
+
+        <section id="game" class="hidden">
+            <div class="game-container">
+                <h2>🎭 دور فريق: <span id="currentTeam"></span></h2>
+                <h3>⏳ الوقت المتبقي: <span id="time">60</span> ثانية</h3>
+
+                <div class="word-container">
+                    <div class="word-header"><p id="word" class="main-word"></p></div>
+                    <div class="word-box">
+                        <p id="word" class="main-word"></p>
+                        <ul id="forbiddenWords" class="forbidden-list"></ul>
+                    </div>
+                </div>
+
+                <button onclick="correctAnswer()">✅ إجابة صحيحة</button>
+                <button onclick="wrongAnswer()">❌ إجابة خاطئة</button>
+                <button id="nextRoundBtn" class="hidden">➡️ الجولة التالية</button>
+            </div>
+        </section>
+
+        <h2 id="winner" class="hidden"></h2>
+    </main>
+
+    <footer>Powered By Tareq abu khashabeh</footer>
+
+    <script src="java.js"></script>
+</body>
+</html>
